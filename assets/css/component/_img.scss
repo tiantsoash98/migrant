@@ -7,7 +7,7 @@
     
     &-load {
         opacity: 0;
-        transition: opacity var(--default-animation-duration) var(--alias-default-ease); 
+        transition: opacity 1.3s var(--alias-default-ease); 
 
         &--loaded {
             opacity: 1;

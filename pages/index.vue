@@ -1,7 +1,7 @@
 <template>
-    <main class="page" id="top">
-        
-    </main>
+    <div class="page" id="top">
+        <Hero/>
+    </div>
 </template>
 
 <script setup>

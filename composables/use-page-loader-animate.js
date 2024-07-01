@@ -28,35 +28,11 @@ export default () => {
     function timelineLoaderOutAnimations () {
         const tl = gsap.timeline()  
 
-        if(document.querySelector('.animate__video-in'))
-            tl.add(timelineVideoIn())
-
         if(document.querySelector('.animate__title-in'))
             tl.add(timelineTitleIn(), '-=1.6s')
 
         if(document.querySelector('.animate__header-in'))
             tl.add(timelineHeaderIn(), '<')
-
-        return tl
-    }
-
-    function timelineVideoIn (){
-        const tl = gsap.timeline({
-            defaults: {
-                duration: 1.3,
-                ease: "expo.out"
-            },
-        })  
-
-        tl
-            .to('.animate__video-in', {
-                clipPath: 'inset(25% 40% round 10px)',
-            })
-            .to('.animate__video-in', {
-                clipPath: 'inset(0% 0% round 0px)',
-                duration: 2.3,
-                ease: "expo.out"
-            })
 
         return tl
     }

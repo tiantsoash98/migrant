@@ -30,6 +30,14 @@
     &-neue-haas-grotesk {
         font-family: 'Neue Haas Display';
     }
+    &-feature{
+        &--default {
+            font-feature-settings: 'ordn' on, 'ss12' on;
+        }
+        &--normal {
+            font-feature-settings: normal;
+        }
+    }
     &-regular {
         font-weight: 400;
     }
@@ -53,6 +61,7 @@
     letter-spacing: var(--title-h1-ls);
     font-weight: var(--title-h1-wght);
     text-transform: uppercase;
+    font-feature-settings: 'ordn' on, 'ss12' on;
 }
 @mixin h2 {
     font-family: var(--title-h2-font);
@@ -61,6 +70,7 @@
     letter-spacing: var(--title-h2-ls);
     font-weight: var(--title-h2-wght);
     text-transform: uppercase;
+    font-feature-settings: 'ordn' on, 'ss12' on;
 }
 @mixin h3 {
     font-family: var(--title-h3-font);
@@ -69,6 +79,7 @@
     letter-spacing: var(--title-h3-ls);
     font-weight: var(--title-h3-wght);
     text-transform: uppercase;
+    font-feature-settings: 'ordn' on, 'ss12' on;
 }
 @mixin h4 {
     font-family: var(--title-h4-font);
@@ -77,6 +88,8 @@
     letter-spacing: var(--title-h4-ls);
     font-weight: var(--title-h4-wght);
     text-transform: uppercase;
+
+    font-feature-settings: 'ordn' on, 'ss12' on;
 }
 @mixin h5 {
     font-family: var(--title-h5-font);
@@ -85,6 +98,7 @@
     letter-spacing: var(--title-h5-ls);
     font-weight: var(--title-h5-wght);
     text-transform: uppercase;
+    font-feature-settings: 'ordn' on, 'ss12' on;
 }
 
 @mixin h6 {
@@ -94,6 +108,7 @@
     letter-spacing: var(--title-h6-ls);
     font-weight: var(--title-h6-ls);
     text-transform: uppercase;
+    font-feature-settings: 'ordn' on, 'ss12' on;
 }
 @mixin p {  
     font-family: var(--paragraph-text-font);

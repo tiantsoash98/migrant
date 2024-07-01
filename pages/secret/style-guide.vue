@@ -7,11 +7,11 @@
             </div>
             <div class="style__wrapper mt-12">
                 <span class="style__label">H1</span>
-                <h1 class="title-h1">Digital playground <br> for natural solutions</h1>
+                <h1 class="title-h1">Naturally comforting.<br>Timelessly modern.</h1>
             </div>
             <div class="style__wrapper mt-12">
                 <span class="style__label">H2</span>
-                <h2 class="title-h2">Digital playground <br> for natural solutions</h2>
+                <h2 class="title-h2">Naturally comforting.<br>Timelessly modern.</h2>
             </div>
             <div class="style__wrapper mt-12">
                 <span class="style__label">H3</span>

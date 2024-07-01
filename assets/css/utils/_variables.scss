@@ -116,7 +116,7 @@ $breakpoints:(
     // Layout
     --container-max-width: 100%;
     --grid-columns: 6;
-    --column-gap: var(--spacing-5);
+    --column-gap: var(--spacing-4);
     --container-horizontal-padding: var(--spacing-12);
     --section-vertical-padding: var(--spacing-20);
 
@@ -144,6 +144,7 @@ $breakpoints:(
 @media screen and (min-width: 992px) {
     :root {
         --grid-columns: 12;
+        --container-horizontal-padding: var(--spacing-16);
         --section-vertical-padding: var(--spacing-30);
     }
 }

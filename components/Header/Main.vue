@@ -33,9 +33,7 @@
     position: fixed;
     z-index: var(--z-index-nav);
     top: 0;
-    left: 0;
-    right: 0;
-    color: var(--color-neutral-0);
+    width: 100%;
 
     &__logo{
         z-index: var(--z-index-nav);

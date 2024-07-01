@@ -2,7 +2,7 @@
     $root:&;
     --button-bg-color: transparent;
     --button-text-color: var(--color-neutral-950);
-    --button-icon-size: calc(var(--callout-text) - 0.05rem);
+    --button-icon-size: var(--callout-text-size);
     --button-padding: var(--spacing-4) 0;
     --button-small-padding: var(--spacing-4) 0;
     color: var(--button-text-color);
@@ -11,7 +11,7 @@
     display: flex;
 
     &--small {
-        font-size: var(--callout-text);
+        font-size: var(--callout-text-size);
         padding: var(--button-small-padding);
     }
     &--secondary {
@@ -30,7 +30,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: var(--spacing-3);
+        gap: var(--spacing-2);
     }
     &__icon {
         width: var(--button-icon-size);

@@ -41,45 +41,6 @@ export default () => {
         document.addEventListener('mouseenter', (e) => {
             cursor.value.classList.remove("cursor--hidden")
         })
-
-        // Links hover : .link
-        let links = document.querySelectorAll(".link")
-        links.forEach(function(elem) {
-            elem.addEventListener("mouseenter", function() {
-                cursor.value.classList.add("cursor--link")
-            })
-        })
-        links.forEach(function(elem) {
-            elem.addEventListener("mouseleave", function() {
-                cursor.value.classList.remove("cursor--link")
-            })
-        })
-
-        // Slider hover : .img-slider
-        let sliders = document.querySelectorAll(".img-slider")
-        sliders.forEach(function(elem) {
-            elem.addEventListener("mouseenter", function() {
-                cursor.value.classList.add("cursor--slider")
-            })
-        })
-        sliders.forEach(function(elem) {
-            elem.addEventListener("mouseleave", function() {
-                cursor.value.classList.remove("cursor--slider")
-            })
-        })
-        
-        // Slider Next : .slider--next
-        // let slidersNext = document.querySelectorAll(".slider--prev")
-        // slidersNext.forEach(function(elem) {
-        //     elem.addEventListener("mouseenter", function() {
-        //         cursor.value.add("cursor-next")
-        //     })
-        // })
-        // slidersNext.forEach(function(elem) {
-        //     elem.addEventListener("mouseleave", function() {
-        //         cursor.value.remove("cursor-next")
-        //     })
-        // })
     }
 
     const destroyCursor = () => {

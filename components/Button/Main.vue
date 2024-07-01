@@ -1,8 +1,8 @@
 <template>
     <div :class="`button button--${type} button--${size} button--${color}`">
         <div class="button__content-wrapper">
-            <component :is="icon" class="button__icon" v-if="hasIcon"/>
             <div class="button__text">{{ text }}</div>
+            <component :is="icon" class="button__icon" v-if="hasIcon"/>
         </div>
     </div>
 </template>
@@ -24,7 +24,7 @@ const props = defineProps({
     },
     icon: {
         type: String,
-        default: 'IconCornerUpRight',
+        default: 'IconArrowNarrowRight',
     },
     color: {
         type: String,

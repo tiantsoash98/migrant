@@ -1,0 +1,67 @@
+*, 
+*::before, 
+*::after, 
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-kerning: none;
+    position: relative;
+}
+
+html, body{
+    width: 100%;
+    overscroll-behavior: none;
+    min-height: 100%;
+}
+
+::selection{
+    background-color: var(--color-neutral-950);
+    color: var(--color-neutral-0);
+}
+
+body, section {
+    background-color: var(--color-neutral-0);
+    color: var(--color-neutral-900);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+ul, li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+svg {
+    fill: currentColor;
+    width: 100%;
+}

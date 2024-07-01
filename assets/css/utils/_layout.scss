@@ -1,0 +1,181 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container-max-width);
+    padding-left: var(--container-horizontal-padding);
+    padding-right:var(--container-horizontal-padding);
+}
+
+.section {
+    margin-top: var(--section-vertical-padding);
+    margin-bottom: var(--section-vertical-padding);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+    grid-gap: var(--column-gap);
+}
+
+$columns:(
+    auto: 'auto',
+    full: '1 / -1',
+    1: 'span 1 / span 1',
+    2: 'span 2 / span 2',
+    3: 'span 3 / span 3',
+    4: 'span 4 / span 4',
+    5: 'span 5 / span 5',
+    6: 'span 6 / span 6',
+    7: 'span 7 / span 7',
+    8: 'span 8 / span 8',
+    9: 'span 9 / span 9',
+    10: 'span 10 / span 10',
+    11: 'span 11 / span 11',
+    12: 'span 12 / span 12',
+);
+
+.col {
+    @each $key, $value in $columns {
+        &-#{$key} {
+            grid-column: unquote($value);
+        }
+    }
+    @include media-min-width(small) {
+        @each $key, $value in $columns {
+            &-sm-#{$key} {
+                grid-column: unquote($value);
+            }
+        }
+    }
+    @include media-min-width(medium) {
+        @each $key, $value in $columns {
+            &-md-#{$key} {
+                grid-column: unquote($value);
+            }
+        }
+    }
+    @include media-min-width(large) {
+        @each $key, $value in $columns {
+            &-lg-#{$key} {
+                grid-column: unquote($value);
+            }
+        }
+    }
+}
+.col-start {
+    @for $i from 1 through 12 {
+        &-#{$i} {
+            grid-column-start: $i;
+        }
+    }
+    @include media-min-width(small) {
+        @for $i from 1 through 12 {
+            &-sm-#{$i} {
+                grid-column-start: $i;
+            }
+        }
+    }
+    @include media-min-width(medium) {
+        @for $i from 1 through 12 {
+            &-md-#{$i} {
+                grid-column-start: $i;
+            }
+        }
+    }
+    @include media-min-width(large) {
+        @for $i from 1 through 12 {
+            &-lg-#{$i} {
+                grid-column-start: $i;
+            }
+        }
+    } 
+}
+
+@mixin spacing($type, $direction) {
+    &-auto { #{$type}-#{$direction}: auto; }
+    &-0 { #{$type}-#{$direction}: var(--spacing-0); }
+    &-1 { #{$type}-#{$direction}: var(--spacing-1); }
+    &-2 { #{$type}-#{$direction}: var(--spacing-2); }
+    &-3 { #{$type}-#{$direction}: var(--spacing-3); }
+    &-4 { #{$type}-#{$direction}: var(--spacing-4); }
+    &-5 { #{$type}-#{$direction}: var(--spacing-5); }
+    &-6 { #{$type}-#{$direction}: var(--spacing-6); }
+    &-7 { #{$type}-#{$direction}: var(--spacing-7); }
+    &-8 { #{$type}-#{$direction}: var(--spacing-8); }
+    &-9 { #{$type}-#{$direction}: var(--spacing-9); }
+    &-10 { #{$type}-#{$direction}: var(--spacing-10); }
+    &-11 { #{$type}-#{$direction}: var(--spacing-11); }
+    &-12 { #{$type}-#{$direction}: var(--spacing-12); }
+    &-13 { #{$type}-#{$direction}: var(--spacing-13); }
+    &-14 { #{$type}-#{$direction}: var(--spacing-14); }
+    &-15 { #{$type}-#{$direction}: var(--spacing-15); }
+    &-16 { #{$type}-#{$direction}: var(--spacing-16); }
+    &-17 { #{$type}-#{$direction}: var(--spacing-17); }
+    &-18 { #{$type}-#{$direction}: var(--spacing-18); }
+    &-19 { #{$type}-#{$direction}: var(--spacing-19); }
+    &-20 { #{$type}-#{$direction}: var(--spacing-20); }
+    &-24 { #{$type}-#{$direction}: var(--spacing-24); }
+    &-30 { #{$type}-#{$direction}: var(--spacing-30); }
+    &-40 { #{$type}-#{$direction}: var(--spacing-40); }
+    &-50 { #{$type}-#{$direction}: var(--spacing-50); }
+    &-60 { #{$type}-#{$direction}: var(--spacing-60); }
+    &-64 { #{$type}-#{$direction}: var(--spacing-64); }
+    &-96 { #{$type}-#{$direction}: var(--spacing-96); }
+    &-128 { #{$type}-#{$direction}: var(--spacing-128); }
+}
+
+$directions:(
+    t: top,
+    b: bottom,
+    l: left,
+    r: right
+);
+
+.m {
+    @each $identifier, $direction in $directions {
+        &#{$identifier} {
+            @include spacing($type: margin, $direction: $direction);
+
+            @include media-min-width(small) {
+                &-sm {
+                    @include spacing($type: margin, $direction: $direction);
+                }
+            }
+            @include media-min-width(medium) {
+                &-md {
+                    @include spacing($type: margin, $direction: $direction);
+                }
+            }
+            @include media-min-width(large) {
+                &-large {
+                    @include spacing($type: margin, $direction: $direction);
+                }
+            }
+        }
+    }
+}
+.p {
+    @each $identifier, $direction in $directions {
+        &#{$identifier} {
+            @include spacing($type: padding, $direction: $direction);
+
+            @include media-min-width(small) {
+                &-sm {
+                    @include spacing($type: padding, $direction: $direction);
+                }
+            }
+            @include media-min-width(medium) {
+                &-md {
+                    @include spacing($type: padding, $direction: $direction);
+                }
+            }
+            @include media-min-width(large) {
+                &-large {
+                    @include spacing($type: padding, $direction: $direction);
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,8 @@
+.parallax {
+    &__wrapper {
+        overflow: hidden;
+    }
+    &__img {
+        transform: scale(1.2);
+    }
+}

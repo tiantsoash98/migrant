@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Romie';
+    src: url(/fonts/RomieTrial-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Neue Haas Display';
+    src: url(/fonts/NeueHaasDisplayRoman.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Neue Haas Display';
+    src: url(/fonts/NeueHaasDisplayMedium.ttf);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+// Classes
+.font {
+    &-romie {
+        font-family: 'Romie';
+    }
+    &-neue-haas-grotesk {
+        font-family: 'Neue Haas Display';
+    }
+    &-regular {
+        font-weight: 400;
+    }
+    &-medium {
+        font-weight: 500;
+    }
+    &-semi-bold {
+        font-weight: 600;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+}
+
+
+// Typography
+@mixin h1 {
+    font-family: var(--title-h1-font);
+    font-size: var(--title-h1-size);
+    line-height: var(--title-h1-lh);
+    letter-spacing: var(--title-h1-ls);
+    font-weight: var(--title-h1-wght);
+    text-transform: uppercase;
+}
+@mixin h2 {
+    font-family: var(--title-h2-font);
+    font-size: var(--title-h2-size);
+    line-height: var(--title-h2-lh);
+    letter-spacing: var(--title-h2-ls);
+    font-weight: var(--title-h2-wght);
+    text-transform: uppercase;
+}
+@mixin h3 {
+    font-family: var(--title-h3-font);
+    font-size: var(--title-h3-size);
+    line-height: var(--title-h3-lh);
+    letter-spacing: var(--title-h3-ls);
+    font-weight: var(--title-h3-wght);
+    text-transform: uppercase;
+}
+@mixin h4 {
+    font-family: var(--title-h4-font);
+    font-size: var(--title-h4-size);
+    line-height: var(--title-h4-lh);
+    letter-spacing: var(--title-h4-ls);
+    font-weight: var(--title-h4-wght);
+    text-transform: uppercase;
+}
+@mixin h5 {
+    font-family: var(--title-h5-font);
+    font-size: var(--title-h5-size);
+    line-height: var(--title-h5-lh);
+    letter-spacing: var(--title-h5-ls);
+    font-weight: var(--title-h5-wght);
+    text-transform: uppercase;
+}
+
+@mixin h6 {
+    font-family: var(--title-h6-font);
+    font-size: var(--title-h6);
+    line-height: var(--title-h6-lh);
+    letter-spacing: var(--title-h6-ls);
+    font-weight: var(--title-h6-ls);
+    text-transform: uppercase;
+}
+@mixin p {  
+    font-family: var(--paragraph-text-font);
+    font-size: var(--paragraph-text-size);
+    line-height: var(--paragraph-text-lh);
+    letter-spacing: var(--paragraph-text-ls);
+    font-weight: var(--paragraph-text-wght);
+}
+@mixin callout-text {
+    font-family: var(--callout-text-font);
+    font-size: var(--callout-text-size);
+    letter-spacing: var(--callout-text-ls);
+    line-height: var(--callout-text-lh);
+    font-weight: var(--callout-text-wght);
+}
+@mixin footnote-text {
+    font-family: var(--footnote-text-font);
+    font-size: var(--footnote-text-size);
+    line-height: var(--footnote-text-lh);
+    letter-spacing: var(--footnote-text-ls);
+    font-weight: var(--footnote-text-wght);
+}
+
+html {
+    font-size: var(--base-font-size);
+}
+body, p, .paragraph-text {
+    @include p;
+}
+h1, .title-h1 {
+    @include h1
+}
+h2, .title-h2 {
+    @include h2
+}
+h3, .title-h3 {
+    @include h3
+}
+h4, .title-h4 {
+    @include h4
+}
+h5, .title-h5 {
+    @include h5
+}
+h6, .title-h6 {
+    @include h6
+}
+.callout-text {
+    @include callout-text;
+}
+.footnote-text {
+    @include footnote-text;
+}

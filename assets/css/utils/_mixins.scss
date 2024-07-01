@@ -1,0 +1,38 @@
+// For media max-width
+@mixin media($breakpoint, $orientation: "") {
+    @if $orientation != "" {
+        @media screen and (max-width: map-get($map: $breakpoints, $key: $breakpoint)) and (orientation: $orientation){
+            @content;
+        }
+    }
+    @else {
+        @media screen and (max-width: map-get($map: $breakpoints, $key: $breakpoint)){
+            @content;
+        }
+    }
+    
+}
+
+// For media min-width
+@mixin media-min-width($breakpoint, $orientation: "") {
+    // Add +1px to value to avoid conflict with max-width on given breakpoint
+    $value: map-get($map: $breakpoints, $key: $breakpoint) + 1;
+
+    @if $orientation != "" {
+        @media screen and (min-width: $value) and (orientation: $orientation){
+            @content;
+        }
+    }
+    @else {
+        @media screen and (min-width: $value){
+            @content;
+        }
+    }
+}
+
+// For media orientation portrait
+@mixin media-portrait(){
+    @media screen and (orientation: portrait){
+        @content;
+    }
+}

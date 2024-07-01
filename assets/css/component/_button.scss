@@ -1,0 +1,38 @@
+.button{
+    $root:&;
+    --button-bg-color: transparent;
+    --button-text-color: var(--color-neutral-950);
+    --button-icon-size: calc(var(--callout-text) - 0.05rem);
+    --button-padding: var(--spacing-4) 0;
+    --button-small-padding: var(--spacing-4) 0;
+    color: var(--button-text-color);
+    cursor: pointer;
+    padding: var(--button-padding);
+    display: flex;
+
+    &--small {
+        font-size: var(--callout-text);
+        padding: var(--button-small-padding);
+    }
+    &--secondary {
+        --button-bg-color: var(--color-neutral-900);
+        --button-text-color: var(--color-neutral-100);
+    }
+    &--tertiary {
+        --button-bg-color: transparent;
+        --button-text-color: var(--color-neutral-100);
+    }
+    &--white {
+        --button-text-color: var(--color-neutral-0)
+    }
+    &__content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-3);
+    }
+    &__icon {
+        width: var(--button-icon-size);
+    }
+}

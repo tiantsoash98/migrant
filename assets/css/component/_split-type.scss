@@ -1,0 +1,10 @@
+.split-type {
+    font-kerning: none;
+
+    &--line-wrapper {
+        overflow: hidden;
+    }
+    &--word-wrapper {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,98 @@
+.cursor {
+    &-pointer {
+        cursor: pointer;
+    }
+    &-grab {
+        cursor: grab;
+    }
+}
+
+.display {
+    &-flex {
+        display: flex;
+    }
+    &-block {
+        display: block;
+    }
+}
+
+.overflow {
+    &-hidden {
+        overflow: hidden;
+    }
+}
+
+.hide-on-below {
+    @include media(large) {
+        &-lg {
+            display: none;
+        }
+    }
+    @include media(medium) {
+        &-md {
+            display: none;
+        }
+    }
+    @include media(small) {
+        &-sm {
+            display: none;
+        }
+    }
+    @include media(extra-small) {
+        &-xs {
+            display: none;
+        }
+    }
+}
+
+.hide-on-above {
+    @include media-min-width(large) {
+        &-lg {
+            display: none;
+        }
+    }
+    @include media-min-width(medium) {
+        &-md {
+            display: none;
+        }
+    }
+    @include media-min-width(small) {
+        &-sm {
+            display: none;
+        }
+    }
+    @include media-min-width(extra-small) {
+        &-xs {
+            display: none;
+        }
+    }
+}
+
+.order {
+    @for $i from 1 through 3 {
+        &-#{$i} {
+            order: $i;
+        }
+    }
+    @include media-min-width(small) {
+        @for $i from 1 through 3 {
+            &-sm-#{$i} {
+                order: $i;
+            }
+        }
+    }
+    @include media-min-width(medium) {
+        @for $i from 1 through 3 {
+            &-md-#{$i} {
+                order: $i;
+            }
+        }
+    }
+    @include media-min-width(large) {
+        @for $i from 1 through 3 {
+            &-lg-#{$i} {
+                order: $i;
+            }
+        }
+    } 
+}
